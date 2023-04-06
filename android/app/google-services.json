@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "798523920972",
+    "firebase_url": "https://sawahku-2058d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sawahku-2058d",
+    "storage_bucket": "sawahku-2058d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798523920972:android:59776500c34b0c5a38dae9",
+        "android_client_info": {
+          "package_name": "com.example.sawahku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798523920972-hc21ks5beid9npmn8mbqcft5ls69gdnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBswe4cE0tZMWseeZkPsYUwG16Vs7DtgSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798523920972-hc21ks5beid9npmn8mbqcft5ls69gdnk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "798523920972-f75t7hpotjufmo5oqbmceq8iri20tc58.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sawahku"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
