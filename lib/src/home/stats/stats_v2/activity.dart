@@ -16,7 +16,7 @@ class _ActivityUserState extends State<ActivityUser> {
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
+                const Text(
                   "Aktivitas Terakhir",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sawahku/src/home/iot_tools/pump_/information.dart';
 import 'package:sawahku/src/home/iot_tools/pump_/progress.dart';
-import 'package:sawahku/src/home/iot_tools/battery/information.dart';
-import 'package:sawahku/src/home/iot_tools/battery/progress.dart';
 
 class IotTools extends StatefulWidget {
   const IotTools({Key? key}) : super(key: key);

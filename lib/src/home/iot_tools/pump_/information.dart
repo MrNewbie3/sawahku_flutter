@@ -24,7 +24,7 @@ class _InformationBatteryState extends State<InformationBattery> {
 
   void _getData() async {
     DatabaseReference starCountRef = FirebaseDatabase.instance.ref('');
-    starCountRef.child('Sawahkita/pompa').onValue.listen((event) {
+    starCountRef.child('PaTani/pompa').onValue.listen((event) {
       final Object? description = event.snapshot.value;
       setState(() {
         status.status = description as bool;

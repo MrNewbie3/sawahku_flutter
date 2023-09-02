@@ -2,8 +2,8 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sawahku/src/user_auth/login_auth.dart';
-import 'package:sawahku/src/user_auth/signin_comps.dart';
+import 'package:sawahku/src/auth/user_auth/login_auth.dart';
+import 'package:sawahku/src/auth/user_auth/signin_comps.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

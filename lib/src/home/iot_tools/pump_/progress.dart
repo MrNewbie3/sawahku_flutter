@@ -20,15 +20,17 @@ class _ProgressBatteryState extends State<ProgressBattery> {
   void initState() {
     super.initState();
     _getData();
+    _waterData();
   }
 
   int current = 0;
+  num height = 0;
   String text = '';
   Color currentColor = const Color.fromRGBO(13, 187, 87, 1);
 
   void _getData() async {
     DatabaseReference starCountRef = FirebaseDatabase.instance.ref('');
-    starCountRef.child('Sawahkita/pompa').onValue.listen((event) {
+    starCountRef.child('PaTani/pompa').onValue.listen((event) {
       final Object? description = event.snapshot.value;
       setState(() {
         status.status = description as bool;
@@ -41,6 +43,16 @@ class _ProgressBatteryState extends State<ProgressBattery> {
           text = "OFF";
           currentColor = const Color.fromRGBO(211, 211, 211, 1);
         }
+      });
+    });
+  }
+
+  void _waterData() async {
+    DatabaseReference starCountRef = FirebaseDatabase.instance.ref('');
+    starCountRef.child('PaTani/tinggiair').onValue.listen((event) {
+      final Object? val = event.snapshot.value;
+      setState(() {
+        height = (val as num) / 3.2 * 100;
       });
     });
   }
@@ -59,8 +71,8 @@ class _ProgressBatteryState extends State<ProgressBattery> {
           unselectedColor: const Color.fromRGBO(211, 211, 211, 1),
           selectedStepSize: 15.0,
           unselectedStepSize: 15.0,
-          width: MediaQuery.of(context).size.width * .6,
-          height: MediaQuery.of(context).size.height * .3,
+          width: 225,
+          height: 225,
           child: Padding(
               padding: const EdgeInsets.all(20),
               child: Container(
@@ -91,8 +103,8 @@ class _ProgressBatteryState extends State<ProgressBattery> {
                               fontSize: MediaQuery.of(context).size.width *
                                   0.15)))))),
       SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-      const Text("98%",
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700))
+      Text("${height.ceil()}%",
+          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.w700))
     ]);
   }
 }
